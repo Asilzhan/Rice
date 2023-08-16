@@ -1,0 +1,23 @@
+﻿@code {
+    [Parameter] public string? Label { get; set; }
+    [Parameter] public EventCallback OnClick { get; set; }
+    [Parameter] public ButtonPassthroughOptions? Pt { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IDictionary<string, object> AdditionalAttributes { get; set; } = null!;
+
+    private ButtonPtContext _buttonPtContext = new();
+
+}
+
+<button class="@(Pt?.Root?.Match(s => s, func => func(_buttonPtContext)))" @onclick="OnClick" @attributes="AdditionalAttributes">
+    <span class="@Pt?.LoadingIcon"></span>
+    <span class="@Pt?.Icon"></span>
+    <span class="@Pt?.Label">@Label</span>
+    <span class="@Pt?.Badge"></span>
+    @ChildContent
+</button>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}
