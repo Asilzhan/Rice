@@ -32,6 +32,7 @@ jobs:
           path: ./out/wwwroot
 
   deploy:
+    needs: build
     environment:
       name: GH Showcase
       url: ${{ steps.deployment.outputs.page_url }}
