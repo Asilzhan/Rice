@@ -23,7 +23,7 @@ jobs:
       
     - name: Build and Publish
       run: |
-        dotnet publish PrimeBlazor -c Release -o out
+        dotnet publish Rice.Showcase -c Release -o out
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
