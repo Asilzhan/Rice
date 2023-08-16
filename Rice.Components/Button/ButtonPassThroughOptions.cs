@@ -1,6 +1,6 @@
 ﻿using OneOf;
 
-namespace PrimeBlazor.Components.Button;
+namespace Rice.Components.Button;
 
 public class ButtonPassthroughOptions
 {

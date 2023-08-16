@@ -4,6 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>Rice.Showcase</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,7 +13,7 @@
     </ItemGroup>
     
     <ItemGroup>
-      <ProjectReference Include="..\PrimeBlazor.Components\PrimeBlazor.Components.csproj" />
+      <ProjectReference Include="..\Rice.Components\Rice.Components.csproj" />
     </ItemGroup>
 
 </Project>
