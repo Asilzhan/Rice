@@ -7,7 +7,6 @@
     public IDictionary<string, object> AdditionalAttributes { get; set; } = null!;
 
     private ButtonPtContext _buttonPtContext = new();
-
 }
 
 <button class="@(Pt?.Root?.Match(s => s, func => func(_buttonPtContext)))" @onclick="OnClick" @attributes="AdditionalAttributes">
