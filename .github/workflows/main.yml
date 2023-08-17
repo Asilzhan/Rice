@@ -23,7 +23,7 @@ jobs:
 
     - name: Build and publish
       run: |
-        dotnet publish -c Release -o out Rice.Showcase --pathbase=/Rice
+        dotnet publish -c Release -o out Rice.Showcase
 
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v2
