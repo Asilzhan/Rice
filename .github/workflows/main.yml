@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add .nojekyll file
-        run: touch release/wwwroot/.nojekyll
+        run: touch .nojekyll
       
       - name: Deploy to GitHub Pages
         id: deployment
